@@ -1,0 +1,268 @@
+{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    :root {
+        --pin_width: 15.625rem;
+        --row_increment: 0.623rem;
+        --pin_radius: 1rem;
+        --pin_small: 26;
+        --pin_medium: 34;
+        --pin_large: 46;
+    }
+
+    main {
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+    }
+
+    nav {
+        height: 5rem;
+        background-color: rgb(253, 251, 250);
+        display: flex;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .navbar-navegacion {
+        min-width: 5rem;
+        background-color: rgb(253, 251, 250);
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .icon1 {
+        display: flex;
+        margin: 1rem;
+
+    }
+
+    .icon1:hover {
+        cursor: pointer;
+        background-color: #e9e9e9;
+        border-radius: 50px;
+        padding: 5px;
+        transition: all 0.3s;
+    }
+
+    .ul1 {
+        display: flex;
+        list-style: none;
+        margin-right: 2.5rem;
+        margin-top: 0rem;
+    }
+
+    li {
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+    }
+
+    .navbar-busqueda {
+        flex-grow: 4;
+        min-width: 3rem;
+        max-width: 60rem;
+        background-color: lightgray;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        padding: 8px;
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-perfil {
+        min-width: 5rem;
+        background-color: rgb(253, 251, 250);
+        display: flex;
+        top: 10px;
+        right: 20px;
+        max-width: 5rem;
+        max-height: 5rem;
+    }
+
+    .navbar_input_search>svg {
+        height: 1rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .navbar_input_search>input {
+        height: 2rem;
+        flex-grow: 3;
+        margin-inline-end: 1rem;
+        margin-inline-start: 0.8rem;
+        background-color: transparent;
+        border-style: none;
+    }
+
+    .navbar_input_search>input:focus-visible {
+        outline: none;
+    }
+
+    .pinterest-icono {
+        height: 0.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+
+    .home-icon {
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .botton {
+        /* padding: 1% 1%; */
+        height: 10%;
+        width: 20%;
+        /* color: white; */
+        background-size: cover;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .pin_contenedor {
+        background-color: rgb(196, 206, 206);
+        width: infinite;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, var(--pin_width));
+        grid-auto-rows: var(--row_increment);
+    }
+
+    .pin {
+        margin: 1rem 1rem;
+        border-radius: var(--pin_radius);
+        background-color: coral;
+        width: auto;
+    }
+
+    .pin_pequenio {
+        grid-row-end: span var(--pin_small);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pin_pequenio:hover {
+        opacity: 0.3;
+        transform: scale(1.05);
+    }
+
+    .pin_pequenio img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: inline-block;
+        transition: transform: 0.3s ease;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    /* botones en el hover (al pasar el raton encima) */
+    .pin_botones {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border-radius: var(--pin_radius);
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* Totalmente invisible */
+        opacity: 0;
+        color: white;
+        text-align: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .pin_botones:hover {
+        /* Totalmente visible */
+        opacity: 0.3;
+    }
+
+    .pin_mediano {
+        grid-row-end: span var(--pin_medium);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pin_mediano:hover {
+        opacity: 0.3;
+        transform: scale(1.05);
+    }
+
+    .pin_mediano img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: inline-block;
+        transition: transform: 0.3s ease;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .pin_grande {
+        grid-row-end: span var(--pin_large);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pin_grande:hover {
+        opacity: 0.3;
+        transform: scale(1.05);
+    }
+
+    .pin_grande img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: inline-block;
+        transition: transform: 0.3s ease;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .pin_mediano:hover {
+        background-color: #f00;
+        /* Cambia el color de fondo al pasar el ratón sobre el elemento */
+    }
+
+    .pin_grande:hover {
+        background-color: #f00;
+        /* Cambia el color de fondo al pasar el ratón sobre el elemento */
+    }
